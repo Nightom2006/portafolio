@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ✏️ Estos textos son los que ven Google y WhatsApp/LinkedIn cuando compartes tu enlace.
+          Cámbialos solo si cambias tu nombre o tu carrera. -->
+  <title>ALESSANDRO JAVIER CAHUANA LUIS · Portafolio</title>
+  <meta name="description" content="Estudiante de Ingeniería de Sistemas e Informática (UTP). Python, Java y desarrollo web.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ALESSANDRO JAVIER CAHUANA LUIS · Portafolio">
+  <meta property="og:description" content="Estudiante de Ingeniería de Sistemas e Informática (UTP). Python, Java y desarrollo web.">
+  <meta name="theme-color" content="#0a1626">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a1626'/%3E%3Ctext x='32' y='43' font-size='34' text-anchor='middle' fill='%232de2d0' font-family='monospace'%3E%7B%7D%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ⚠️ No necesitas editar este archivo. Tus datos se cambian en datos.js -->
+
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="cab">
+    <div class="cab__in">
+      <a class="logo" href="#inicio" aria-label="Ir al inicio">
+        <span class="logo__llave">{</span><span id="logo-iniciales">AC</span><span class="logo__llave">}</span>
+      </a>
+      <nav class="menu" id="menu" aria-label="Principal">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#competencias">Competencias</a>
+        <a href="#educacion">Educación</a>
+        <a href="#logros">Certificaciones</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a class="cab__cta" href="#contacto">Contactar</a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="sr">Abrir menú</span><span class="menu-btn__barras"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <section class="hero" id="inicio" aria-label="Presentación">
+      <div class="hero__in">
+        <div class="hero__texto">
+          <div class="hero__id">
+            <div class="hero__foto" id="h-foto"></div>
+            <p class="hero__rol" id="h-rol"></p>
+          </div>
+          <h1 class="hero__nombre" id="h-nombre"></h1>
+          <p class="hero__desc" id="h-desc"></p>
+          <div class="hero__acciones">
+            <a class="btn btn--primario" href="#contacto">Contactar</a>
+            <a class="btn btn--borde" href="#proyectos">Ver proyectos</a>
+            <a class="btn btn--borde" id="btn-cv" href="#" download hidden>Descargar CV</a>
+          </div>
+          <ul class="hero__redes" id="h-redes"></ul>
+        </div>
+
+        <div class="ventana" aria-hidden="true">
+          <div class="ventana__barra"><i></i><i></i><i></i><span>perfil.py</span></div>
+          <pre class="ventana__codigo" id="codigo"></pre>
+        </div>
+      </div>
+      <dl class="ficha" id="ficha"></dl>
+    </section>
+
+    <section class="seccion" id="sobre-mi" aria-labelledby="t-sobre">
+      <div class="seccion__in">
+        <h2 class="seccion__titulo" id="t-sobre">Sobre mí</h2>
+        <div class="sobre" id="sobre-texto"></div>
+      </div>
+    </section>
+
+    <section class="seccion" id="competencias" aria-labelledby="t-comp">
+      <div class="seccion__in">
+        <h2 class="seccion__titulo" id="t-comp">Competencias</h2>
+        <div>
+          <div class="filas" id="lista-competencias"></div>
+          <div class="aptitudes" id="bloque-aptitudes">
+            <h3>Aptitudes</h3>
+            <ul id="lista-aptitudes"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="educacion" aria-labelledby="t-edu">
+      <div class="seccion__in">
+        <h2 class="seccion__titulo" id="t-edu">Educación</h2>
+        <div class="educacion" id="lista-educacion"></div>
+      </div>
+    </section>
+
+    <section class="seccion" id="logros" aria-labelledby="t-logros">
+      <div class="seccion__in">
+        <h2 class="seccion__titulo" id="t-logros">Certificaciones y licencias</h2>
+        <ul class="logros" id="lista-logros"></ul>
+      </div>
+    </section>
+
+    <section class="seccion" id="proyectos" aria-labelledby="t-proy">
+      <div class="seccion__in">
+        <h2 class="seccion__titulo" id="t-proy">Proyectos</h2>
+        <div class="proyectos" id="lista-proyectos"></div>
+      </div>
+    </section>
+
+    <section class="seccion contacto" id="contacto" aria-labelledby="t-cont">
+      <div class="seccion__in">
+        <h2 class="seccion__titulo" id="t-cont">Contacto</h2>
+        <div>
+          <p class="contacto__texto" id="contacto-texto"></p>
+          <div class="contacto__acciones" id="lista-contacto"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <p id="pie-texto"></p>
+  </footer>
+
+  <noscript><p style="padding:24px;text-align:center">Activa JavaScript para ver este portafolio.</p></noscript>
+
+  <script src="datos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
